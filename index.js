@@ -108,6 +108,7 @@ mongoose.connect('mongodb+srv://amrellahdelil:Node123456@cluster0.hsssurx.mongod
                 let updatedData = req.body;
                 let option = {new : true};
                 
+                
                 try{
                     let pData = await Product.findByIdAndUpdate(id, updatedData, option);
                     res.status(200).send({
