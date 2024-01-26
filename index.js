@@ -11,6 +11,7 @@ const Product = require('./product');
     extended : true
  }))
 
+ console.log('here');
 
  const productData = []
 
@@ -107,7 +108,7 @@ mongoose.connect('mongodb+srv://amrellahdelil:Node123456@cluster0.hsssurx.mongod
                 let id = req.params.id;
                 let updatedData = req.body;
                 let option = {new : true};
-                
+
                 
                 try{
                     let pData = await Product.findByIdAndUpdate(id, updatedData, option);
